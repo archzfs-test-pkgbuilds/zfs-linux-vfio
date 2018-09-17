@@ -47,7 +47,7 @@ package_zfs-linux-vfio() {
     install=zfs.install
     provides=("zfs")
     groups=("archzfs-linux-vfio")
-    conflicts=("zfs-dkms" "zfs-dkms-git"'zfs-linux-vfio-git')
+    conflicts=("zfs-dkms" "zfs-dkms-git" 'zfs-linux-vfio-git')
     cd "${srcdir}/zfs-${_zfsver}"
     make DESTDIR="${pkgdir}" install
     cp -r "${pkgdir}"/{lib,usr}
